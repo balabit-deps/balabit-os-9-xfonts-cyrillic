@@ -1,0 +1,123 @@
+xfonts-cyrillic (1:1.0.5) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 01 Jan 2021 17:23:03 +0100
+
+xfonts-cyrillic (1:1.0.4) unstable; urgency=medium
+
+  * Get rid of debian/xsfbs/.
+  * Remove David, Cyril and Brice from Uploaders.
+  * Bump debhelper compat level to 7.
+  * Pass GZIP=-n to $(MAKE) to avoid timestamps in compressed fonts.
+
+ -- Julien Cristau <jcristau@debian.org>  Mon, 02 Feb 2015 23:13:50 +0100
+
+xfonts-cyrillic (1:1.0.3) unstable; urgency=low
+
+  [ Julien Cristau ]
+  * Rename the build directory to not include DEB_BUILD_GNU_TYPE for no
+    good reason.  Thanks, Colin Watson!
+  * Remove myself from Uploaders
+  * New upstream releases (X11R7.6):
+    - font-cronyx-cyrillic 1.0.3
+    - font-misc-cyrillic 1.0.3
+    - font-screen-cyrillic 1.0.4
+    - font-winitzki-cyrillic 1.0.3
+
+  [ Cyril Brulebois ]
+  * Add myself to Uploaders.
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 16 Nov 2010 23:43:56 +0100
+
+xfonts-cyrillic (1:1.0.1) unstable; urgency=low
+
+  * debian/rules: build things in parallel.
+  * New upstream releases for X11R7.5:
+    - font-cronyx-cyrillic 1.0.1
+    - font-misc-cyrillic 1.0.1
+    - font-screen-cyrillic 1.0.2
+    - font-winitzki-cyrillic 1.0.1
+  * Add watch files and debian/rules snippet to download new upstream
+    tarballs with uscan.
+  * Bump xfonts-utils build-dep, use new fontrootdir variable in fontutil.pc
+    instead of passing --with-fontdir to configure.
+  * Bump Standards-Version to 3.8.3.
+  * Add build-dep on pkg-config.
+  * Drop maintainer scripts which were handling upgrades from pre-etch
+    versions.
+
+ -- Julien Cristau <jcristau@debian.org>  Sat, 02 Jan 2010 08:12:12 +0000
+
+xfonts-cyrillic (1:1.0.0-7) unstable; urgency=low
+
+  * Add README.source, bump Standards-Version to 3.8.2.
+  * Store fonts.alias in the debian/ directory instead of
+    using 046_fix_cyrillic_font_aliases.diff to add it later,
+    closes: #538672.
+    + Remove quilt from Build-Depends.
+  * Update DEB_BUILD_OPTIONS parsing to handle space-separated values and
+    parallel=%.
+  * Remove obsolete build-deps on pkg-config and xutils.
+  * Move package to the 'fonts' section.
+
+ -- Brice Goglin <bgoglin@debian.org>  Sun, 26 Jul 2009 11:47:46 +0200
+
+xfonts-cyrillic (1:1.0.0-6) unstable; urgency=low
+
+  * Update patches to not use -p0, closes: #485272.
+  * Add myself to uploaders.
+  * Bump Standards-Version to 3.7.3, no change needed.
+  * Add Vcs-Browser and Vcs-Git fields to debian/control.
+
+ -- Brice Goglin <bgoglin@debian.org>  Sat, 14 Jun 2008 18:57:17 +0200
+
+xfonts-cyrillic (1:1.0.0-5) unstable; urgency=low
+
+  * Add upstream URL to debian/copyright.
+  * Add myself to Uploaders, and remove Branden with his permission.
+
+ -- Julien Cristau <jcristau@debian.org>  Tue, 24 Jul 2007 19:24:14 +0200
+
+xfonts-cyrillic (1:1.0.0-4) unstable; urgency=medium
+
+  [ Eugene Konev ]
+  * Drop X11R7 from aliases install path.
+  * Switch to dh_installxfonts.
+  * Drop fonts.scale and fonts.dir from binary package. This is serious
+    policy violation, thus raised urgency.
+  * Correct description of xfonts-cyrillic.
+  * Bump policy to 3.7.2 (now we are compliant).
+  * Remove unused debhelper helpers.
+  * Build package in binary-indep, not in binary-arch.
+  * Add quilt to build-depends.
+
+  [ David Nusinow ]
+  * Bump debhelper compat to 5 and build-dep on debhelper to >= 5.0.31
+  * Remove Fabio from uploaders with his permission. He's always welcome back.
+  * Capitalize "Russian" in debian/copyright. Thlintian.
+
+ -- David Nusinow <dnusinow@debian.org>  Sat, 30 Sep 2006 17:00:27 -0400
+
+xfonts-cyrillic (1:1.0.0-3) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- David Nusinow <dnusinow@debian.org>  Mon, 10 Apr 2006 23:36:12 -0400
+
+xfonts-cyrillic (1:1.0.0-2) experimental; urgency=low
+
+  * Port patches from trunk
+    + general/046_fix_cyrillic_font_aliases.diff
+
+ -- David Nusinow <dnusinow@debian.org>  Sun,  5 Mar 2006 21:15:34 -0500
+
+xfonts-cyrillic (1:1.0.0-1) experimental; urgency=low
+
+  [ Eugene Konev ]
+  * First upload to debian
+  * Add xutils to depends.
+  * Move fonts to /usr/share/fonts/X11/cyrillic
+
+ -- David Nusinow <dnusinow@debian.org>  Sun, 19 Feb 2006 10:41:48 -0500

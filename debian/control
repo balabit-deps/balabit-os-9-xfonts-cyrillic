@@ -1,0 +1,20 @@
+Source: xfonts-cyrillic
+Section: fonts
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends:
+ debhelper (>= 7),
+ xfonts-utils (>= 1:7.5),
+ pkg-config,
+Standards-Version: 3.8.3
+Vcs-Git: git://git.debian.org/git/pkg-xorg/font/xfonts-cyrillic
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/font/xfonts-cyrillic.git
+
+Package: xfonts-cyrillic
+Architecture: all
+Depends: ${misc:Depends}
+Suggests: xfs | xserver
+Description: Cyrillic fonts for X 
+ xfonts-cyrillic provides a set of fonts using the Cyrillic alphabet for X
+ servers.  In most cases it is desirable to have the X font server (xfs)
+ and/or an X server installed to make the fonts available to X clients.
